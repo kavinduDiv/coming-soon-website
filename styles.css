@@ -1,49 +1,94 @@
 body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, hsl(29, 97%, 58%), #2f2cfc);
-    color: #fff;
-  
-  }
-  
-  .container {
-    text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, hsl(29, 97%, 58%), #2f2cfc);
+  color: #fff;
 
-    
+}
+
+.container {
+  text-align: center;
+
+
+}
+
+h1 {
+  font-size: 4rem;
+  margin: 0;
+  animation: textGlow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #0a0800, 0 0 20px #f5b505, 0 0 30px #f52c08;
   }
-  
-  h1 {
-    font-size: 4rem;
-    margin: 0;
-    animation: textGlow 1.5s ease-in-out infinite alternate;
+
+  to {
+    text-shadow: 0 0 10px #f12602, 0 0 20px #00020e, 0 0 30px #fff, 0 0 40px #0c0900;
   }
-  
-  @keyframes textGlow {
-    from {
-      text-shadow: 0 0 5px #fff, 0 0 10px #0a0800, 0 0 20px #f5b505, 0 0 30px #f52c08;
-    }
-    to {
-      text-shadow: 0 0 10px #f12602, 0 0 20px #00020e, 0 0 30px #fff, 0 0 40px #0c0900;
-    }
+}
+
+p {
+  font-size: 1.2rem;
+  margin: 10px 0 30px;
+}
+
+#countdown {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+#countdown span {
+  font-weight: bold;
+  color: #f8b500;
+}
+
+.txt-size {
+  font-size: 32px;
+}
+
+.txt-p {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@keyframes autoPlayAnimation {
+
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  p {
-    font-size: 1.2rem;
-    margin: 10px 0 30px;
+
+  50% {
+    transform: translateY(-10px);
+    opacity: 0.8;
   }
-  
-  #countdown {
-    font-size: 1.5rem;
-    margin-top: 20px;
-  }
-  
-  #countdown span {
-    font-weight: bold;
-    color: #f8b500;
-  }
-  
+}
+
+.fb-link {
+  margin-top: 30px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3b5998;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  animation: autoPlayAnimation 3s ease-in-out infinite;
+}
+
+.fb-link i {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.text-link {
+  text-decoration: none;
+  color: white;
+}
